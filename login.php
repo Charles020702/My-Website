@@ -41,54 +41,40 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
-    <style type="text/css">
-        #text{
-
-            height: 25px;
-            border-radius: 5px;
-            padding: 4px
-            border: solid thin #aaa;
-            width: 100%;
-        }
-
-        #button{
-            padding: 10px;
-            width: 100px;
-            color: white;
-            background-color: Lightblue;
-            border: none;
-        }
-
-        #box{
-            background-color: grey;
-            margin: auto;
-            width: 300px;
-            padding: 20px
-        }
-
-
-    </style>
-
-    <div id="box">
-
+   <div class="wrapper">
         <form method="post">
-            <div style="font-size: 20px;margin: 10px;color: white;">Login</div>
-            <input id="text" type="text" name="user_name"><br><br>
-            <input id="text" type="password" name="password"><br><br>
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" name="user_name" required>
+                <i class='bx bxs-user'></i>
+            </div>    
+            <div class="input-box">
+                <input type="password" placeholder="Password" name="password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div> 
+                <div class="remember-forgot">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password?</a>
+                </div>
 
-            <input id="button" type="submit" value="Login"><br><br>
+                <button type="submit" class="btn">Login</button>
 
-            <a href="signup.php">Click to Signup</a><br><br>
+            <div class="register-link">
+                <p>Don't have account? <a href="signup.php">Register</a></p>
+            </div>
         </form>
-    </div>
+   </div>
 </body>
 </html>
